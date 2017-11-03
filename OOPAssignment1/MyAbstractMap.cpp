@@ -93,13 +93,19 @@ bool MyAbstractMap::FindByKey(int pKey)
     return false;
 }
 
-MyAbstractMap::MyAbstractMap()
+MyAbstractMap::MyAbstractMap(size_t pSize = 0)
 {
+	// Set up array data
+	mSize = pSize;
+	kvdataArray = new KeyValuePair[mSize];
+
+	// Console message for success
     cout << "Created map class." << endl;
 }
 
 MyAbstractMap::MyAbstractMap(MyAbstractMap & OtherMap)
 {
+	kvdataArray = new KeyValuePair[OtherMap.mSize * 2];
     // Iterate through the OtherMap
     for (OtherMap.kvdataIterator = OtherMap.kvdata.begin(); OtherMap.kvdataIterator != OtherMap.kvdata.end(); OtherMap.kvdataIterator++)
     {
@@ -112,6 +118,8 @@ MyAbstractMap::~MyAbstractMap()
 	// TODO - do not ude STD
 	kvdata.std::vector<KeyValuePair>::~vector();
 	kvdataIterator.std::vector<KeyValuePair>::iterator::~iterator(); // TODO - Maybe tbis iterator doenst need to be deallocated too, because it is by the previous statement
+
+	delete [] kvdataArray;
 
 	cout << "Destroyed map class." << endl;
 }
