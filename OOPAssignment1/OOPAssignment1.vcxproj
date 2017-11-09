@@ -145,6 +145,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractKeyValuePair.h" />
     <ClInclude Include="KeyValuePair.h" />
     <ClInclude Include="MyAbstractMap.h" />
     <ClInclude Include="stdafx.h" />

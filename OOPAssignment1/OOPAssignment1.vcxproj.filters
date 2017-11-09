@@ -30,6 +30,9 @@
     <ClInclude Include="KeyValuePair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractKeyValuePair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

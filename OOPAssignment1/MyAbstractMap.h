@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "KeyValuePair.h"
+#include "AbstractKeyValuePair.h"
 
 #include <vector>
 #include <iostream>
@@ -11,8 +12,8 @@ using namespace std;
 class MyAbstractMap
 {
 private:
-	std::vector<KeyValuePair> kvdata;
-	std::vector<KeyValuePair>::iterator kvdataIterator;
+	std::vector<AbstractKeyValuePair> kvdata;
+	std::vector<AbstractKeyValuePair>::iterator kvdataIterator;
 public:
 	// CORE FUNCTIONS
 	bool Add(int pKey, char pValue);
